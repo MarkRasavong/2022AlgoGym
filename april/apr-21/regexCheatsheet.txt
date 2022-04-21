@@ -1,0 +1,68 @@
+//IF CAPITALIZED IT IS A NEGATION
+
+.      - All Characters Except New Line
+
+\g     - tested all possible matches in a string (global)
+
+\d     - Digit (0-9)
+          {matches all numbers in text}
+          ex) \d\d\d => any 3 digits in a row
+          ex) \d\d\d.\d\d\d.\d\d\d\d => any numbers with - or . inbetween them
+
+\D     - Not a Digit (0-9)
+          {Matches all characters that are not numbers}
+
+\w     - word character (a-z, A-Z, 0-9, _)
+          {All leters, numbers, and underscores minus the special characters}
+
+\W     - not a word character
+          {Special characters only}
+
+\s     - Whitespace (space, tab, newline)
+          {As mentioned above}
+
+\S     - Not Whitespace (space, tab, newline)
+
+
+\b     - Word Boundary **8.27
+          {highlights any repeative query with a space inbetween}
+\B     - Not a Word Boundary
+          {non word boundaries matched}
+
+^      - Beginning of the a string => ^Ha
+$      - End of the a string => Ha$ => see if it ends with Ha
+
+[]     - Matches Characters in brackets (character set)
+          ex) \d\d\d[-.]\d\d\d[-.]\d\d\d\d  any digits inbetween with a dot or dash
+          ex) [89]00[-.]\d\d\d[-.]\d\d\d\d any 800 or 900 numbers
+
+-      - if its not in the beginning or end of regex it serves as a rand 
+          ex) [1-7] => one through 7
+          ex) [a-zA-Z] => all letters with all cases
+
+[^ ]   - Matches Characters not in brackets
+          ex) [^b]at => any words with at minus bat
+
+|      - Either or
+( )    - Group
+
+Quantifiers:
+*      - 0 or more
+        { matches 0 or more}
++      - 1 or more
+?      - 0 or one
+        ex) Mr\.? => can have Mr or Mr.
+        ex) Mr\.?\s[A-Z]\w* 
+        => as above with space and any CAPITALIZED letter 
+        with zeero or more characters
+
+{3}    - exact Number
+        ex) \d{3}.\d{3}.\d{4} => \d\d\d.\d\d\d.\d\d\d\d 
+{1, 3} - Range of numbers (min, max)
+      
+
+      ex) M(r|s|rs)\.?\s[A-Z]\w*
+      // searches Mr, Mrs Ms with an option dot with a space with 
+      a upercase leterr and zero or more letters follwoing it
+
+      https?://(www\.)?(\w+)(\.\w+)
