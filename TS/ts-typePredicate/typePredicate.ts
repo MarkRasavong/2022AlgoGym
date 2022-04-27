@@ -24,7 +24,10 @@ async function getPerson(id: string): Promise<Person | null> {
   if (person && isPerson(person)) {
     return person;
   }
-
   //else  return nothing
   return null;
+}
+
+function logScores(firstName: string, ...scores: any[]) {
+  console.log(scores);
 }
