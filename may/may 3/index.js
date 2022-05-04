@@ -11,3 +11,14 @@ const solution = (num) => {
   if (multiple.length === 0 || num < 0) return 0
   return multiple.reduce((acc, val) => acc + val)
 }
+
+function solution2(number) {
+  var sum = 0;
+
+  for (var i = 1; i < number; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      sum += i
+    }
+  }
+  return sum;
+}
