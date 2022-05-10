@@ -1,5 +1,7 @@
 //https://www.codewars.com/kata/541c8630095125aba6000c00/train/javascript
 // my solution
+
+// higher space complexity do to recursive function
 const digital_root = (num) => {
     const numSum = [...String(num)]
         .map(num => Number(num))
