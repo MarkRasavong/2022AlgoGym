@@ -23,4 +23,4 @@ function digital_root2(n) {
     }
 
     return n;
-}
+};
