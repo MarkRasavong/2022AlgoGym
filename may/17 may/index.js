@@ -15,7 +15,11 @@ const nine = (cb) => typeof cb === 'function' ? cb(9) : 9
 
 // a refers to the value inside 
 // b is the function before the opereator
-const plus = (a) => (b) => parseInt(a + b)
+function plus(a) {
+  return function (b) {
+    return a + b;
+  }
+}
 const minus = (a) => (b) => parseInt(b - a)
 const times = (a) => (b) => parseInt(a * b)
 const dividedBy = (a) => (b) => parseInt(b / a)
