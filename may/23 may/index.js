@@ -10,4 +10,3 @@ const pigIt2 = (string) => (
     return match.slice(1) + w[0] + 'ay'
   })
 );
-
