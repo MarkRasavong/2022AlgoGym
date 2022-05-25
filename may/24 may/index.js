@@ -1,3 +1,4 @@
+//https://www.codewars.com/kata/pete-the-baker/discuss/javascript
 const cakes = (recipe, available) => {
   let count = 0;
 
@@ -16,5 +17,4 @@ const cakes = (recipe, available) => {
     }
     count++;
   }
-
 }
