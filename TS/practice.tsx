@@ -1,5 +1,19 @@
-const multiple = (n1: unknown, n2: unknown) => {
-  if( typeof n1 === 'number' && typeof n2 === 'number') return n1 * n2;
-  return
-};
+class Person {
+  private _name: string;
 
+  constructor(name: string) {
+    this._name = name;
+  };
+
+  public get name(): string {
+    return this._name;
+  };
+
+  public set name(newValue: string) {
+    newValue.trim();
+
+    if(newValue === '') throw ('name must not be empty');
+
+    this._name = newValue;
+  }
+}
