@@ -5,4 +5,4 @@ const longest = (s1, s2) => {
   return Array.from(novoSort).join('')
 }
 
-const longestClevr = (s1, s2) => [...new Set(s1 + s2)].sort().join('')
+const longestClevr = (s1, s2) => [...new Set(s1 + s2)].sort().join('');
