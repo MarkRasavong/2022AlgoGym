@@ -5,6 +5,6 @@ const sumTwoSmallestNumbers = (numbers) => numbers.sort((a, b) => b - a).slice(-
 //Clever
 
 function sumTwoSmallestNumbers1(numbers) {
-  var [a, b] = numbers.sort((a, b) => a - b)
-  return a + b
+  let [firstIdx, secondIdx] = numbers.sort((a, b) => a - b)
+  return firstIdx + secondIdx
 };
