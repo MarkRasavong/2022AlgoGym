@@ -7,3 +7,12 @@ const dontGiveMeFive = (strt, end) => {
 
   return result.filter(num => !String(num).includes('5')).length
 }
+
+//CLEVER
+function dontGiveMeFive1(start, end) {
+  let res = [];
+  for (let i = start; i <= end; i++) {
+    if (!i.toString().includes('5')) res.push(i);
+  }
+  return res.length;
+}
