@@ -5,4 +5,3 @@ const isPangram = str => {
 
   return str === 26 ? true : false;
 };
-
