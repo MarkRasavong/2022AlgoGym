@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/contains-duplicate/
 var containsDuplicate = function (nums) {
   let cache = {}
   //should not repeat more than once
