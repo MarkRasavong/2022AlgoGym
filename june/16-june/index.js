@@ -16,5 +16,3 @@ const isTriangle = (a, b, c) => {
 
 //CLEVER
 var isTriangle2 = (a, b, c) => Math.max(a, b, c) < (a + b + c) / 2
-
-const shortstWordLength = str => str.substr(Math.ceil(str.length / 2 - 1), str.length % 2 === 0 ? 2 : 1);
