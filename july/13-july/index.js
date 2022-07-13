@@ -2,6 +2,5 @@
 
 const betterThanAverage = (classPoints, yourPoints) => {
   classPoints = classPoints.reduce((a, c) => a + c) / classPoints.length
-
   return yourPoints < classPoints ? false : true
 }
