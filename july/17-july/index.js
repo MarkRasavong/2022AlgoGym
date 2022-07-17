@@ -6,3 +6,12 @@ const removeSmallest = (numbers) => {
   copy.splice(smallestValue, 1);
   return copy
 }
+
+//clever
+const removeSmalles1t = numbers => numbers.filter((n, i) => i !== numbers.indexOf(Math.min(...numbers)));
+
+
+function removeSmallest2(numbers) {
+  const min = Math.min.apply(this, numbers);
+  return numbers.filter((num, idx, arr) => idx !== arr.indexOf(min));
+}
